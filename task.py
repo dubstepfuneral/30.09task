@@ -54,16 +54,28 @@ def count_money(initial_money_amount, percent, years):
 
 # Предлагается реализовать функцию, сравнивающую каждый элемент списка с заданным числом.
 
-def elementwise_greater_than(L, thresh):
+def elementwise_greater_than(L, thresh): # thresh = threshold i guess
     """Возвращает список той же длины, что и L, где значение в индексе i равно
     True, если L[i] больше порогового значения, и False в противном случае """
-    pass
+    result = [] # variable for the result
+    for i in L:
+        if i > thresh:
+            result.append(True)
+        else:
+            result.append(False)
+    return result
 
 assert(elementwise_greater_than([1, 2, 3, 4], 2) == [False, False, True, True])
 
 def is_valid_zip(zip_code):
     """Проверяет индес на валидность. Будем считать, что почтовый индекс валиден, если он состоит из 6 цифр"""
-    pass
+    
+    """first check, for all integers"""
+    allIntegers = zip_code.isnumeric()
+    if allIntegers == False:
+        return False
+    """second check, for length"""
+    if zip_code.length == 
 
 assert(is_valid_zip('123456') == True)
 assert(is_valid_zip('12345a') == False)
