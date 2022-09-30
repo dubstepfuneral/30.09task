@@ -48,9 +48,9 @@ def square_statistcis(square):
 
 def count_money(initial_money_amount, percent, years):
     endMoney = initial_money_amount # the money amount we'll end up with after the am-t of years, starting with the initial amount
-    for i in years:
+    for i in range(years):
         endMoney = endMoney + endMoney*(percent*0.01)
-    return endMoney
+    return int(endMoney)
 
 # Предлагается реализовать функцию, сравнивающую каждый элемент списка с заданным числом.
 
@@ -75,7 +75,10 @@ def is_valid_zip(zip_code):
     if allIntegers == False:
         return False
     """second check, for length"""
-    if zip_code.length == 
+    if len(zip_code) == 6:
+        return True
+    else:
+        return False
 
 assert(is_valid_zip('123456') == True)
 assert(is_valid_zip('12345a') == False)
@@ -94,7 +97,8 @@ def word_search(doc_list, keyword):
     """
     Принимает список документов doc_list (каждый документ представляет собой строку) и ключевое слово.
     Возвращает список значений индекса в исходный список для всех документов, содержащих ключевое слово. """
-    pass
+    
+
 
 doc_list = ["Москит укусил туриста", "Кит, в Тихом океане", "Кот-бегемот"]
 print(word_search(doc_list, 'кит'))
